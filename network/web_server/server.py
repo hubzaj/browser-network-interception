@@ -5,7 +5,7 @@ from threading import Event
 
 
 class WebServer:
-    __SERVER_START_TIMEOUT = 30
+    __SERVER_START_TIMEOUT: int = 30
 
     def __init__(self, directory: str) -> None:
         self.__directory: str = directory
