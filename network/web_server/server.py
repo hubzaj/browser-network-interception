@@ -32,7 +32,6 @@ class WebServer:
         server = HTTPServer(('', self.__port), CGIHTTPRequestHandler)
 
         self.__port = server.server_port
-        print(f'\nserver is up and running on localhost:{self.__port}\n')
         self.__start_server_event.set()
 
         server.serve_forever()
