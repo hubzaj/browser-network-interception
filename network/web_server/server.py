@@ -1,7 +1,6 @@
 import os
 import threading
 from http.server import HTTPServer, CGIHTTPRequestHandler
-from pathlib import Path
 from threading import Event
 
 
@@ -37,7 +36,3 @@ class WebServer:
         self.__start_server_event.set()
 
         server.serve_forever()
-
-
-def start_tmp_server(directory: Path) -> WebServer:
-    return WebServer(directory=str(directory))
