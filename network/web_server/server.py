@@ -1,14 +1,15 @@
 import os
 import threading
 from http.server import HTTPServer, CGIHTTPRequestHandler
+from pathlib import Path
 from threading import Event
 
 
 class WebServer:
     __SERVER_START_TIMEOUT: int = 30
 
-    def __init__(self, directory: str) -> None:
-        self.__directory: str = directory
+    def __init__(self, directory: Path) -> None:
+        self.__directory: Path = directory
         self.__port: int = 0
         self.__start_server_event: Event = Event()
 
