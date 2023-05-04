@@ -30,8 +30,6 @@ class WebServer:
         server_directory = os.path.dirname(self.__directory)
         os.chdir(server_directory)
         server = HTTPServer(('', self.__port), CGIHTTPRequestHandler)
-
         self.__port = server.server_port
         self.__start_server_event.set()
-
         server.serve_forever()
