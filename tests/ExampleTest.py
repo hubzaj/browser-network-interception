@@ -17,10 +17,8 @@ def test_example(tmp_path: Path):
             # When
             requests = browser.open_page(
                 url=tmp_server.get_url(),
+                # Then
                 requests_paths_to_wait=[
                     ad.get_dsp_notification_url()
                 ]
             )
-
-            # Then
-            assert True
