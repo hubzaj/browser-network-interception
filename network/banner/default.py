@@ -64,7 +64,7 @@ class BannerAd(Enum):
             """
         ).safe_substitute(
             id=cls.get_ad_click_id_locator(),
-            image_src='https://drive.google.com/file/d/1RJ6-oCLeMdaBbhxiH_k53AwagTtpwO4W/view?usp=share_link'
+            image_src='https://bimmerlife.com/wp-content/uploads/2019/11/G30-5-Series-Business-Athlete-823x462.jpg'
         )
 
     @classmethod
