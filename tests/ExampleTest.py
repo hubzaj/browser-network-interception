@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from selenium.webdriver.common.by import By
+
 from browser import open_browser
 from browser.browser_type import BrowserType
 from network.banner.default import BannerAd
@@ -15,10 +17,8 @@ def test_example(tmp_path: Path):
     with open_browser(BrowserType.CHROME) as browser:
         with WebServer(directory=page_path) as tmp_server:
             # When
-            requests = browser.open_page(
-                url=tmp_server.get_url(),
-                # Then
-                requests_paths_to_wait=[
-                    ad.get_dsp_notification_url()
-                ]
-            )
+            browser \
+                .open_page(url=tmp_server.get_url()) \
+                .wait_for_requests(requests_paths_to_wait=[ad.get_dsp_notification_url()]) \
+                .click((By.ID, ad.get_ad_click_id_locator())) \
+                .wait_for_requests(requests_paths_to_wait=[ad.get_click_redirection_url()])
