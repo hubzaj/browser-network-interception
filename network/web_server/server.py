@@ -6,10 +6,10 @@ from threading import Event
 
 
 class WebServer:
-    __SERVER_START_TIMEOUT = 30
+    __SERVER_START_TIMEOUT: int = 30
 
-    def __init__(self, directory: str) -> None:
-        self.__directory: str = directory
+    def __init__(self, directory: Path) -> None:
+        self.__directory: Path = directory
         self.__port: int = 0
         self.__start_server_event: Event = Event()
 
@@ -31,13 +31,6 @@ class WebServer:
         server_directory = os.path.dirname(self.__directory)
         os.chdir(server_directory)
         server = HTTPServer(('', self.__port), CGIHTTPRequestHandler)
-
         self.__port = server.server_port
-        print(f'\nserver is up and running on localhost:{self.__port}\n')
         self.__start_server_event.set()
-
         server.serve_forever()
-
-
-def start_tmp_server(directory: Path) -> WebServer:
-    return WebServer(directory=str(directory))
