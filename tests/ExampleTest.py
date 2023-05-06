@@ -21,4 +21,5 @@ def test_example(tmp_path: Path):
                 .open_page(url=tmp_server.get_url()) \
                 .wait_for_requests(requests_paths_to_wait=[ad.get_dsp_notification_url()]) \
                 .click((By.ID, ad.get_ad_click_id_locator())) \
-                .wait_for_requests(requests_paths_to_wait=[ad.get_click_redirection_url()])
+                .wait_for_requests(requests_paths_to_wait=[ad.get_click_redirection_url()]) \
+                .close_newly_opened_tab()
