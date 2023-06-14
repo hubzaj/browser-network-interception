@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from network.banner.default import BannerAd
-from network.keywords.browser_keywords import BrowserKeywords
+from network.keywords.browser import BrowserKeywords
 
 
 class TestExample:
