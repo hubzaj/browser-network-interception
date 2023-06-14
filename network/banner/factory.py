@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from .default import BannerAd
 from network.utils.file import create_file
+from .default import BannerAd
 
 __HTML_PREFIX: str = '<!DOCTYPE html><head><title></title></head><html><body>'
 __HTML_SUFFIX: str = '</body></html>'
