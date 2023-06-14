@@ -1,6 +1,5 @@
 from pathlib import Path
 
-from pytest import fixture
 from selenium.webdriver.common.by import By
 from seleniumwire.request import Request
 
@@ -28,10 +27,6 @@ class BrowserKeywords:
             with WebServer(directory=page_path) as server:
                 browser.open_page(url=server.get_url())
                 if click_locator:
-                    browser.click_with_redirect_to_new_tab(locator=click_locator)
+                    with browser.click_with_redirect_to_new_tab(locator=click_locator):
+                        pass
                 return browser.get_network_traffic(requests_paths_to_wait=requests_paths_to_wait)
-
-
-@fixture
-def browser_keywords(tmp_path: Path) -> BrowserKeywords:
-    yield BrowserKeywords(tmp_path)
