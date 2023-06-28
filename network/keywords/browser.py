@@ -22,7 +22,6 @@ class BrowserKeywords:
                                            requests_paths_to_wait: list[str] = None,
                                            click_locator: (By, str) = None) -> list[Request]:
         page_path: Path = create_html_page_with_default_ad(ad=ad, directory=self.__tmp_path)
-
         with open_browser(config.browser_type) as browser:
             with WebServer(directory=page_path) as server:
                 browser.open_page(url=server.get_url())
