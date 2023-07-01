@@ -10,7 +10,7 @@ python = "^3.11"
 mypy = "^1.2.0"
 flake8 = "^6.0.0"
 pytest = "^7.3.1"
-browser = {git = "git@github.com:hubzaj/browser.git", rev = "main"}
+browser = { git = "git@github.com:hubzaj/browser.git", rev = "main" }
 pytest-xdist = "^3.3.1"
 
 [tool.flake8]
@@ -30,7 +30,6 @@ testpaths = [
 markers = [
     "browser"
 ]
-
 
 [build-system]
 requires = ["poetry-core"]
