@@ -1,2 +1,2 @@
 run-browser-test-in-parallel:
-	poetry run pytest -m browser -n 2
+	poetry run pytest -m browser -n auto
