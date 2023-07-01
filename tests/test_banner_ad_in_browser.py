@@ -6,9 +6,9 @@ from network.keywords.browser import BrowserKeywords
 
 
 @pytest.mark.browser
-class TestExample:
+class TestBannerAdInBrowser:
 
-    def test_example(self, browser_keywords: BrowserKeywords):
+    def test_banner_ad_in_browser(self, browser_keywords: BrowserKeywords):
         # Given
         ad: BannerAd = BannerAd.REGULAR_AD  # Product of the ad request sent to SSP
 
@@ -22,6 +22,8 @@ class TestExample:
                 ad.get_click_redirection_url()
             ],
         )
+
+        # TODO: Add response verification (for the requests that are processed by us)
 
     def test_example_2(self, browser_keywords: BrowserKeywords):
         # Given
