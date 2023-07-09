@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 
-def create_file(directory: Path, file_name, data: str) -> Path:
+def create_file(directory: Path, file_name: str, data: str) -> Path:
     file_path: Path = __create_file(directory=directory, file_name=file_name)
     file_path.write_text(data=data)
     return file_path
