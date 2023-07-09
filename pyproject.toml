@@ -15,7 +15,7 @@ pytest-xdist = "^3.3.1"
 
 [tool.flake8]
 exclude = [".git", ".venv", "__pycache__"]
-max_line_length = 120
+max-line-length = 120
 max-complexity = 8
 
 [tool.mypy]
@@ -24,6 +24,9 @@ check_untyped_defs = true
 disallow_untyped_defs = true
 
 [tool.pytest.ini_options]
+pythonpath = [
+  ".", "network"
+]
 testpaths = [
     "tests"
 ]
