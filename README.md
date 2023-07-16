@@ -6,4 +6,4 @@ This is only an example - we are not sending ad requests to SSP. This example is
 
 The flow (from deliver to display ad) looks in simplification as in the below example.
 <img width="760" alt="image" src="https://github.com/hubzaj/network/assets/89909315/1cb055ec-932b-4b2f-a8b8-ee898fba2aa7">
-(https://blog.admixer.com/what-is-supply-side-platform-guide-publishers/)
+  (https://blog.admixer.com/what-is-supply-side-platform-guide-publishers/)
