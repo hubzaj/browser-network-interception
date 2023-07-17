@@ -11,5 +11,5 @@ In this project we are focusing on the last part - ad display. SSP delivers the 
 
 <img width="447" alt="image" src="https://github.com/hubzaj/network/assets/89909315/2eb2007b-8fbd-4447-8731-e8b4d34a1e86">
 
-To fetch incoming requests (all the notifications that are sent by ad markup that is placed and fired on the page in the web browser) I have decided to use [selenium-wire](https://github.com/wkeeling/selenium-wire) as pure Selenium and its [BiDi implementation of CDP](https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#network-interception) doesn't support network interception for Python due the inability to mix certain async and sync commands.
+This framework is responsible for validating if all the requests have been sent after the successful ad display. To intercept and collect all incoming requests (all the notifications that are sent by ad markup that is placed and fired on the page in the web browser) I have decided to use [selenium-wire](https://github.com/wkeeling/selenium-wire) as pure Selenium and its [BiDi implementation of CDP](https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#network-interception) doesn't support network interception for Python due the inability to mix certain async and sync commands.
 
