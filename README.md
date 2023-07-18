@@ -34,7 +34,7 @@ Requirements:
 
 ## How to run
 * Run from IDE (PyCharm - recommended). Tests are located at `tests/`
-* Run from command line `make e.g. run-all-tests-in-parallel`
+* Run from command line `make run-all-tests-in-parallel`
 * Run from command line `poetry run pytest -m browser` [NOT READY YET]
 
 ## Configuration
