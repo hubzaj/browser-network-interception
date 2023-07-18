@@ -32,7 +32,8 @@ Requirements:
 
 ## How to run
 * Run from IDE (PyCharm - recommended). Tests are located at `tests/`
-* Run from command line `poetry run pytest -m ` [NOT READY YET]
+* Run from command line `make e.g. run-all-tests-in-parallel`
+* Run from command line `poetry run pytest -m browser` [NOT READY YET]
 
 ## Configuration
 Configuration is designed in a way to be controlled by environment variables.
