@@ -29,3 +29,20 @@ Requirements:
   > asdf plugin-add poetry
   > asdf install
  ```
+
+## How to run
+* Run from IDE (PyCharm - recommended). Tests are located at `tests/`
+* Run from command line `poetry run pytest -m ` [NOT READY YET]
+
+## Configuration
+Configuration is designed in a way to be controlled by environment variables.
+
+    [BROWSER]
+
+##### Default:
+* Browser: `Chrome (without headless)`
+
+#### Supported browsers:
+* `CHROME`
+* `CHROME_HEADLESS` [NOT READY YET]
+* `CHROME_IN_DOCKER` [NOT READY YET]
