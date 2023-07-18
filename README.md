@@ -1,4 +1,4 @@
-# Network - example of e2e test framework
+# Network - e2e test framework example
 
 # Background
 
