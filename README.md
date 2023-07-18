@@ -1,4 +1,6 @@
-# network
+# Network - example of e2e test framework
+
+# Background
 
 This is an example e2e test framework responsible for verifying the display of an ad on the client side.
 For the sake of example we can assume that we are working in the SSP company which is responsible for delivering the ad to the publisher.
