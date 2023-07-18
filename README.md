@@ -20,7 +20,7 @@ Requirements:
 - Python ^3.11
 - Poetry ^1.5.1
 
-# Compiling using terminal
+# Working with terminal
 
 1. Install `asdf` with required plugins.
  ```
