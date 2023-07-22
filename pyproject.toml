@@ -1,20 +1,20 @@
 [tool.poetry]
-name = "network"
-version = "0.1.0"
-description = ""
-authors = ["Hubert Zajac <hubertzajac6@gmail.com>"]
-readme = "README.md"
+name = 'network'
+version = '0.1.0'
+description = ''
+authors = ['Hubert Zajac <hubertzajac6@gmail.com>']
+readme = 'README.md'
 
 [tool.poetry.dependencies]
-python = "^3.11"
-mypy = "^1.2.0"
-flake8 = "^6.0.0"
-pytest = "^7.3.1"
-browser = { git = "git@github.com:hubzaj/browser.git", rev = "main" }
-pytest-xdist = "^3.3.1"
+python = '^3.11'
+mypy = '^1.2.0'
+flake8 = '^6.0.0'
+pytest = '^7.3.1'
+browser = { git = 'git@github.com:hubzaj/browser.git', rev = 'main' }
+pytest-xdist = '^3.3.1'
 
 [tool.flake8]
-exclude = [".git", ".venv", "__pycache__"]
+exclude = ['.git', '.venv', '__pycache__']
 max-line-length = 120
 max-complexity = 8
 
@@ -25,15 +25,19 @@ disallow_untyped_defs = true
 
 [tool.pytest.ini_options]
 pythonpath = [
-  ".", "network"
+    '.', 'network'
 ]
 testpaths = [
-    "tests"
+    'tests'
 ]
 markers = [
-    "browser"
+    'browser'
 ]
 
+[tool.poetry.scripts]
+linters = 'scripts.linter:run_linters'
+browser-tests = 'scripts.run_test_group:run_e2e_web_browser_tests'
+
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ['poetry-core']
+build-backend = 'poetry.core.masonry.api'
