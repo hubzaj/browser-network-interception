@@ -1,6 +1,7 @@
 import os
 
-from src import BrowserType
+from browser import BrowserType
+
 from src.utils.singleton_meta import SingletonMeta
 
 
