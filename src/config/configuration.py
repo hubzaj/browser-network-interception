@@ -1,7 +1,7 @@
 import os
 
-from browser import BrowserType
-from network.utils.singleton_meta import SingletonMeta
+from src import BrowserType
+from src.utils.singleton_meta import SingletonMeta
 
 
 class Configuration(metaclass=SingletonMeta):

@@ -2,7 +2,7 @@ from pathlib import Path
 
 from _pytest.fixtures import fixture
 
-from network.keywords.browser import BrowserKeywords
+from src.keywords.browser import BrowserKeywords
 
 
 @fixture

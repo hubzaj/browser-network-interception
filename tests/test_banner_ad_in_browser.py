@@ -2,9 +2,9 @@ import pytest
 from selenium.webdriver.common.by import By
 from seleniumwire.request import Request
 
-from browser.utils.request import get_request_with_path
-from network.banner.default import BannerAd
-from network.keywords.browser import BrowserKeywords
+from src.utils.request import get_request_with_path
+from src.banner.default import BannerAd
+from src.keywords.browser import BrowserKeywords
 
 
 @pytest.mark.browser
