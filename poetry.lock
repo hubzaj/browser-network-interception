@@ -134,13 +134,13 @@ flake8 = "^6.0.0"
 mypy = "^1.2.0"
 pytest = "^7.3.1"
 selenium-wire = "^5.1.0"
-webdriver-manager = "^3.8.6"
+webdriver-manager = "3.9.1"
 
 [package.source]
 type = "git"
 url = "https://github.com/hubzaj/browser.git"
 reference = "HEAD"
-resolved_reference = "6fa98984d4c4a2ebdbf06441756f4761c31df9cb"
+resolved_reference = "5d674d914944260e0610d69bd20ec30ceed88bd6"
 
 [[package]]
 name = "certifi"
