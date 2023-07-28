@@ -134,13 +134,13 @@ flake8 = "^6.0.0"
 mypy = "^1.2.0"
 pytest = "^7.3.1"
 selenium-wire = "^5.1.0"
-webdriver-manager = "3.9.1"
+webdriver-manager = "^4.0.0"
 
 [package.source]
 type = "git"
 url = "https://github.com/hubzaj/browser.git"
 reference = "HEAD"
-resolved_reference = "5d674d914944260e0610d69bd20ec30ceed88bd6"
+resolved_reference = "d20d012c119bcd5d96cb47bad276541969b86d74"
 
 [[package]]
 name = "certifi"
@@ -916,13 +916,13 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "webdriver-manager"
-version = "3.9.1"
+version = "4.0.0"
 description = "Library provides the way to automatically manage drivers for different browsers"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "webdriver_manager-3.9.1-py2.py3-none-any.whl", hash = "sha256:1dfc29a786abb97ba28076d4766d931064eeeac71a9685a3e8d46f5d363fcbe3"},
-    {file = "webdriver_manager-3.9.1.tar.gz", hash = "sha256:cd1f49ebb325a98b4dc3c41056f5b645e82fff3f83e346607844ec0bdf561c0b"},
+    {file = "webdriver_manager-4.0.0-py2.py3-none-any.whl", hash = "sha256:05f58ab599b907b03e0aa8d6b43624b1ca8c12d5d48455c79c531b9052ae2356"},
+    {file = "webdriver_manager-4.0.0.tar.gz", hash = "sha256:2b8d1c2cb590d296ade18bc7bc2589578a868f5587133922d744641f6a757a20"},
 ]
 
 [package.dependencies]
