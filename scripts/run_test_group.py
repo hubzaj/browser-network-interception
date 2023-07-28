@@ -10,4 +10,4 @@ def run_all_tests_in_parallel(params: list[str] | None = None) -> None:
 
 
 def run_e2e_web_browser_tests_in_parallel() -> None:
-    run_all_tests_in_parallel(['-m', 'src'])
+    run_all_tests_in_parallel(['-m', 'network'])

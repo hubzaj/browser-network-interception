@@ -4,10 +4,10 @@ from browser import open_browser
 from selenium.webdriver.common.by import By
 from seleniumwire.request import Request
 
-from src.banner.default import BannerAd
-from src.banner.factory import create_html_page_with_default_ad
-from src.config.configuration import Configuration
-from src.web_server.server import WebServer
+from network.banner.default import BannerAd
+from network.banner.factory import create_html_page_with_default_ad
+from network.config.configuration import Configuration
+from network.web_server.server import WebServer
 
 config: Configuration = Configuration()
 

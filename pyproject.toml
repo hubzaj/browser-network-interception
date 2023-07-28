@@ -11,7 +11,7 @@ mypy = "^1.4.1"
 flake8 = '^6.0.0'
 pytest = '^7.4.0'
 pytest-xdist = '^3.3.1'
-browser = {git = "https://github.com/hubzaj/browser.git"}
+browser = { git = "https://github.com/hubzaj/browser.git" }
 
 [tool.flake8]
 exclude = ['.git', '.venv', '__pycache__']
@@ -24,12 +24,6 @@ check_untyped_defs = true
 disallow_untyped_defs = true
 
 [tool.pytest.ini_options]
-pythonpath = [
-    '.', 'src'
-]
-testpaths = [
-    'tests'
-]
 markers = [
     'browser'
 ]

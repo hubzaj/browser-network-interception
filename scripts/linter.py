@@ -6,5 +6,5 @@ def run_linters() -> None:
         ['poetry', 'run', 'flake8']
     )
     subprocess.run(
-        ['poetry', 'run', 'mypy', 'src', 'tests', 'scripts']
+        ['poetry', 'run', 'mypy', 'network', 'tests', 'scripts']
     )
