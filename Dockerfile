@@ -1,7 +1,7 @@
 FROM python:3.11.3-slim
 
 RUN apt update
-RUN apt install -y make wget gcc git
+RUN apt install -y wget
 
 RUN pip install -U poetry
 
