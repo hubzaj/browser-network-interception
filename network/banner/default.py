@@ -42,7 +42,7 @@ class BannerAd(Enum):
         return Template(
             """
             <div id="dsp_display_ad_notification" style="position:absolute;left:0px;visibility:hidden;">
-                <img src="$dsp_notification_url">
+                <img browser="$dsp_notification_url">
             </div>
             """
         ).safe_substitute(
@@ -59,7 +59,7 @@ class BannerAd(Enum):
         return Template(
             """
             <a target="_blank" href="{clickurl}">
-                <img id="$id" src="$image_src">
+                <img id="$id" browser="$image_src">
             </a>
             """
         ).safe_substitute(
