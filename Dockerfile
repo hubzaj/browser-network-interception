@@ -7,14 +7,13 @@ RUN pip install -U poetry
 WORKDIR /home/app
 
 COPY poetry.lock pyproject.toml /home/app/
-RUN poetry config virtualenvs.create false
+RUN poetry config virtualenvs.create false && \
+    poetry install --no-interaction --no-ansi
 
 RUN wget --tries=10 https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     apt install -y ./google-chrome-stable_current_amd64.deb && \
     rm google-chrome-stable_current_amd64.deb
 
 COPY . /home/app
-
-RUN poetry install --no-interaction --no-ansi
 
 ENTRYPOINT ["poetry", "run"]
