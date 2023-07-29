@@ -47,5 +47,5 @@ Configuration is designed in a way to be controlled by environment variables.
 
 #### Supported browsers:
 * `CHROME`
-* `CHROME_HEADLESS` [NOT READY YET]
+* `CHROME_HEADLESS`
 * `CHROME_IN_DOCKER` [NOT READY YET]

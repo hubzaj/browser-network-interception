@@ -7,11 +7,11 @@ readme = 'README.md'
 
 [tool.poetry.dependencies]
 python = '^3.11'
-mypy = '^1.2.0'
+mypy = "^1.4.1"
 flake8 = '^6.0.0'
-pytest = '^7.3.1'
-browser = { git = 'git@github.com:hubzaj/browser.git', rev = 'main' }
+pytest = '^7.4.0'
 pytest-xdist = '^3.3.1'
+browser = {git = "https://github.com/hubzaj/browser.git"}
 
 [tool.flake8]
 exclude = ['.git', '.venv', '__pycache__']
@@ -24,20 +24,15 @@ check_untyped_defs = true
 disallow_untyped_defs = true
 
 [tool.pytest.ini_options]
-pythonpath = [
-    '.', 'network'
-]
-testpaths = [
-    'tests'
-]
 markers = [
     'browser'
 ]
 
 [tool.poetry.scripts]
 linters = 'scripts.linter:run_linters'
-browser-tests = 'scripts.run_test_group:run_e2e_web_browser_tests'
+all-tests = 'scripts.run_test_group:run_all_tests_in_parallel'
+browser-tests = 'scripts.run_test_group:run_e2e_web_browser_tests_in_parallel'
 
 [build-system]
-requires = ['poetry-core']
+requires = ['poetry-core>=1.5.1']
 build-backend = 'poetry.core.masonry.api'

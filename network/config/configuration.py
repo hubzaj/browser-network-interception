@@ -1,6 +1,7 @@
 import os
 
 from browser import BrowserType
+
 from network.utils.singleton_meta import SingletonMeta
 
 

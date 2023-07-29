@@ -1,9 +1,9 @@
 from pathlib import Path
 
+from browser import open_browser
 from selenium.webdriver.common.by import By
 from seleniumwire.request import Request
 
-from browser import open_browser
 from network.banner.default import BannerAd
 from network.banner.factory import create_html_page_with_default_ad
 from network.config.configuration import Configuration
