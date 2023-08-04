@@ -1,0 +1,8 @@
+# Default values for network-e2e-tests.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: docker.io/hubertzajac6/network
+  tag: latest
+  pullPolicy: IfNotPresent

@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: network-e2e-tests
+spec:
+  ttlSecondsAfterFinished: 100
+  template:
+    spec:
+      containers:
+        - name: network
+          image: {{ .Values.image.repository }}:{{ required "image.tag is required" .Values.image.tag }}
+          command: [ "poetry",  "run", "pytest" ]
+      restartPolicy: Never
