@@ -1,6 +1,6 @@
 import subprocess
 
-RUN_ALL_TESTS_IN_PARALLEL_CMD: list[str] = ['pytest', '-n', 'auto']
+RUN_ALL_TESTS_IN_PARALLEL_CMD: list[str] = ['pytest', '--template=html1/index.html --report=report.html', '-n', 'auto']
 
 
 def run_all_tests_in_parallel(params: list[str] | None = None) -> None:
