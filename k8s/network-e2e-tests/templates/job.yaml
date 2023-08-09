@@ -9,5 +9,5 @@ spec:
       containers:
         - name: network
           image: {{ .Values.image.repository }}:{{ required "image.tag is required" .Values.image.tag }}
-          command: [ "poetry", "run", "pytest" ]
+          command: [ {{ .Values.test.group | quote }} ]
       restartPolicy: Never

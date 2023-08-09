@@ -6,3 +6,6 @@ image:
   repository: docker.io/hubertzajac6/network
   tag: latest
   pullPolicy: IfNotPresent
+
+test:
+  group: pytest
