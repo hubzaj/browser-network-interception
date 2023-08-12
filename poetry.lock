@@ -155,7 +155,7 @@ webdriver-manager = "^4.0.0"
 type = "git"
 url = "https://github.com/hubzaj/browser.git"
 reference = "HEAD"
-resolved_reference = "026df7cd490ad703b9ea29525ab1fe9652b8741a"
+resolved_reference = "6943386366469a229d5848e11b98c823b84d257e"
 
 [[package]]
 name = "certifi"

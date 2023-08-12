@@ -1,8 +1,10 @@
 import os
+from logging import Logger, getLogger
 
 from browser import BrowserType
-
 from network.utils.singleton_meta import SingletonMeta
+
+LOGGER: Logger = getLogger(__name__)
 
 
 class Configuration(metaclass=SingletonMeta):
@@ -13,6 +15,7 @@ class Configuration(metaclass=SingletonMeta):
 
     @staticmethod
     def __load_browser_type() -> BrowserType:
+        LOGGER.info('Loading configuration [BROWSER]')
         if browser_type := os.getenv("BROWSER"):
             return BrowserType.get_browser(browser_type)
         else:

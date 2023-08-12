@@ -1,8 +1,11 @@
 import os
 import threading
 from http.server import HTTPServer, CGIHTTPRequestHandler
+from logging import Logger, getLogger
 from pathlib import Path
 from threading import Event
+
+LOGGER: Logger = getLogger(__name__)
 
 
 class WebServer:
@@ -14,6 +17,7 @@ class WebServer:
         self.__start_server_event: Event = Event()
 
     def __enter__(self) -> 'WebServer':
+        LOGGER.info('Start web server')
         thread = threading.Thread(name='tmp_server', target=self.__start_server)
         thread.daemon = True
         thread.start()
@@ -21,6 +25,7 @@ class WebServer:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        LOGGER.info('Shutdown web server')
         # TODO: kill server?
         pass
 
