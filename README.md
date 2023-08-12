@@ -35,7 +35,15 @@ Requirements:
 ## How to run
 * Run from IDE (PyCharm - recommended). Tests are located at `tests/`
 * Run from command line using make e.g. `poetry run browser-tests`
-* Run from command line `poetry run pytest -n auto -m browser`
+* Run from command line e.g. `poetry run pytest -n auto -m browser`
+
+Tests can be also executed on Kubernetes cluster as a job.
+This is handy when the whole infrastructure (devint/qa/prod environments) relays on k8s.
+
+Play locally with minikube (https://minikube.sigs.k8s.io/docs/start/).
+K8s configuration is managed by Helm Charts (https://helm.sh/docs/intro/cheatsheet/).
+
+
 
 ## Configuration
 Configuration is designed in a way to be controlled by environment variables.
