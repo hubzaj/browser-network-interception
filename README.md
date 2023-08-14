@@ -1,3 +1,5 @@
+[![Docker][docker-shield]][https://hub.docker.com/r/hubertzajac6/network]
+
 # Network - e2e test framework example
 
 # Background
@@ -36,14 +38,10 @@ Requirements:
 * Run from IDE (PyCharm - recommended). Tests are located at `tests/`
 * Run from command line using make e.g. `poetry run browser-tests`
 * Run from command line e.g. `poetry run pytest -n auto -m browser`
-
-Tests can be also executed on Kubernetes cluster as a job.
-This is handy when the whole infrastructure (devint/qa/prod environments) relays on k8s.
-
-Play locally with minikube (https://minikube.sigs.k8s.io/docs/start/).
-K8s configuration is managed by Helm Charts (https://helm.sh/docs/intro/cheatsheet/).
-
-
+* [CI/CD] Tests can be also executed on Kubernetes cluster as a job.
+This is handy when the whole infrastructure (devint/qa/prod environments) relays on k8s.  
+  * Additionally, you can play with it on your local machine by using [minikube](https://minikube.sigs.k8s.io/docs/start/).
+  K8s configuration is managed by [Helm Charts](https://helm.sh/docs/intro/cheatsheet/).
 
 ## Configuration
 Configuration is designed in a way to be controlled by environment variables.
