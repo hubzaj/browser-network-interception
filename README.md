@@ -1,6 +1,7 @@
-[![Docker][docker-shield]][https://hub.docker.com/r/hubertzajac6/network]
-
 # Network - e2e test framework example
+[<img src="https://img.shields.io/badge/development-CMD-blue">](https://github.com/hubzaj/network/tree/main#working-with-terminal)
+[<img src="https://img.shields.io/badge/configuration-OPTIONS-yellow">](https://github.com/hubzaj/network/tree/main#configuration)
+[<img src="https://img.shields.io/badge/dockerhub-images-important.svg?logo=Docker">](https://hub.docker.com/r/hubertzajac6/network)
 
 # Background
 
@@ -21,8 +22,17 @@ This framework is responsible for validating if all the requests have been sent 
 # How to build project
 
 Requirements:
-- Python ^3.11
-- Poetry ^1.5.1
+-     Python ^3.11
+-      Poetry ^1.5.1
+
+## How to run
+* Run from IDE (PyCharm - recommended). Tests are located at `tests/`
+* Run from command line using make e.g. `poetry run browser-tests`
+* Run from command line e.g. `poetry run pytest -n auto -m browser`
+* [CI/CD] Tests can be also executed on Kubernetes cluster as a job.
+This is handy when the whole infrastructure (devint/qa/prod environments) relays on k8s. 
+  * Additionally, you can play with it on your local machine by using [minikube](https://minikube.sigs.k8s.io/docs/start/).
+      K8s configuration is managed by [Helm Charts](https://helm.sh/docs/intro/cheatsheet/).
 
 # Working with terminal
 
@@ -33,15 +43,6 @@ Requirements:
   > asdf plugin-add poetry
   > asdf install
  ```
-
-## How to run
-* Run from IDE (PyCharm - recommended). Tests are located at `tests/`
-* Run from command line using make e.g. `poetry run browser-tests`
-* Run from command line e.g. `poetry run pytest -n auto -m browser`
-* [CI/CD] Tests can be also executed on Kubernetes cluster as a job.
-This is handy when the whole infrastructure (devint/qa/prod environments) relays on k8s.  
-  * Additionally, you can play with it on your local machine by using [minikube](https://minikube.sigs.k8s.io/docs/start/).
-  K8s configuration is managed by [Helm Charts](https://helm.sh/docs/intro/cheatsheet/).
 
 ## Configuration
 Configuration is designed in a way to be controlled by environment variables.
