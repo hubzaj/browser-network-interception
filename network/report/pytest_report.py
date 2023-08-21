@@ -18,7 +18,7 @@ class PytestReportConfig:
         return os.path.join(project_root_dir, PytestReportConfig.dir_name, PytestReportConfig.report_name)
 
 
-def pytest_publish_report(project_root_dir: str) -> None:
+def publish_pytest_report(project_root_dir: str) -> None:
     pytest_report_path: str = PytestReportConfig.get_report_path(project_root_dir)
 
     while not os.path.exists(pytest_report_path):
