@@ -5,7 +5,7 @@ import pytest
 from _pytest.fixtures import fixture
 
 from network.keywords.browser import BrowserKeywords
-from network.report.pytest_report import PytestReportConfig, pytest_publish_report
+from network.report.pytest_report import PytestReportConfig, publish_pytest_report
 
 
 def pytest_configure(config: pytest.Config):
@@ -29,7 +29,7 @@ def pytest_sessionfinish(session: pytest.Session, exitstatus: pytest.ExitCode):
     :param exitstatus:
     :return:
     """
-    pytest_publish_report(str(session.fspath))
+    publish_pytest_report(str(session.fspath))
 
 
 @fixture
