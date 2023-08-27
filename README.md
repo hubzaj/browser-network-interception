@@ -4,7 +4,7 @@
 [<img src="https://img.shields.io/badge/configuration-OPTIONS-yellow">](https://github.com/hubzaj/network/tree/main#configuration)
 [<img src="https://img.shields.io/badge/dockerhub-images-important.svg?logo=Docker">](https://hub.docker.com/r/hubertzajac6/network)
 
-# Background
+## Background
 
 This is an example e2e test framework responsible for verifying the display of an ad on the client side.
 For the sake of example we can assume that we are working in the SSP company which is responsible for delivering the ad
@@ -30,14 +30,14 @@ Selenium and
 its [BiDi implementation of CDP](https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#network-interception)
 doesn't support network interception for Python due the inability to mix certain async and sync commands.
 
-# How to build project
+## How to build project
 
 Requirements:
 
 -     Python ^3.11
 -     Poetry ^1.5.1
 
-## How to run
+### How to run
 
 * Run from IDE (PyCharm - recommended). Tests are located at `tests/`
 * Run from command line using make e.g. `poetry run browser-tests`
@@ -48,7 +48,7 @@ Requirements:
       using [minikube](https://minikube.sigs.k8s.io/docs/start/).
       K8s configuration is managed by [Helm Charts](https://helm.sh/docs/intro/cheatsheet/).
 
-# Working with terminal
+### Working with terminal
 
 1. Install `asdf` with required plugins.
 
@@ -59,7 +59,7 @@ Requirements:
   > asdf install
  ```
 
-## Configuration
+### Configuration
 
 Configuration is designed in a way to be controlled by environment variables.
 
