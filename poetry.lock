@@ -137,18 +137,18 @@ files = [
 
 [[package]]
 name = "browser-hz"
-version = "2.0.0"
-description = ""
+version = "3.0.0"
+description = "Tailored Selenium Wire extension for in-house project development."
 optional = false
 python-versions = ">=3.11,<4.0"
 files = [
-    {file = "browser_hz-2.0.0-py3-none-any.whl", hash = "sha256:94bca548d0482e9f31ba4a2a7df676b5f5738147f8954218ef4b606bf4987129"},
-    {file = "browser_hz-2.0.0.tar.gz", hash = "sha256:aa689dcccf9fee4e91f7031f8f29916cacba781a85cd4a133c74d2c5b3c821ac"},
+    {file = "browser_hz-3.0.0-py3-none-any.whl", hash = "sha256:554ed1824a657e2bee33fecf9fb0fd4c1e19296d32b8f6763ea723553ca3b300"},
+    {file = "browser_hz-3.0.0.tar.gz", hash = "sha256:23e6cb589bac5453d4055217d97074fcddf05db483352b051ee1d1978725ec5d"},
 ]
 
 [package.dependencies]
-flake8 = ">=6.0.0,<7.0.0"
-mypy = ">=1.2.0,<2.0.0"
+flake8 = ">=6.1.0,<7.0.0"
+mypy = ">=1.5.1,<2.0.0"
 pytest = ">=7.3.1,<8.0.0"
 selenium-wire = ">=5.1.0,<6.0.0"
 webdriver-manager = ">=4.0.0,<5.0.0"
@@ -1167,4 +1167,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "f42c2c057ccbdf4d0bbf555664226325af86a4f50cd637af0df495fcc3ebe5a2"
+content-hash = "82aabfc7d7f8baa0b654f3a65181e41aa1e8510143f5aad6213037561c689c71"

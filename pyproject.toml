@@ -9,7 +9,7 @@ packages = [{ include = "network" }]
 [tool.poetry.dependencies]
 python = '^3.11'
 mypy = "^1.5.1"
-browser-hz = "^2.0.0"
+browser-hz = "^3.0.0"
 flake8 = '^6.0.0'
 pytest = '^7.4.0'
 pytest-xdist = '^3.3.1'
