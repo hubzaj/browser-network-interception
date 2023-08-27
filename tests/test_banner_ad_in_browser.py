@@ -1,5 +1,5 @@
 import pytest
-from browser.utils.request import get_request_with_path
+from browser_hz.utils.request import get_request_with_path
 from selenium.webdriver.common.by import By
 from seleniumwire.request import Request
 

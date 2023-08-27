@@ -1,7 +1,7 @@
 import os
 from logging import Logger, getLogger
 
-from browser import BrowserType
+from browser_hz import BrowserType
 from network.utils.singleton_meta import SingletonMeta
 
 LOGGER: Logger = getLogger(__name__)
