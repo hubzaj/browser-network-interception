@@ -1,9 +1,10 @@
 [tool.poetry]
-name = 'network'
+name = 'browser-network-interception'
 version = '0.1.0'
 description = ''
 authors = ['Hubert Zajac <hubertzajac6@gmail.com>']
 readme = 'README.md'
+packages = [{ include = "network" }]
 
 [tool.poetry.dependencies]
 python = '^3.11'
