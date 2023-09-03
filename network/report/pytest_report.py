@@ -1,7 +1,6 @@
 import os
-from dataclasses import dataclass
-
 import time
+from dataclasses import dataclass
 
 
 @dataclass
@@ -25,8 +24,7 @@ def publish_pytest_report(project_root_dir: str) -> None:
         time.sleep(0.1)
 
     if os.path.isfile(pytest_report_path):
-        # TODO: Publish test report to the QA related bucket (e.g. GCS, S3)
+        # TODO: Publish test report to the QA related bucket (e.g. GCS, S3) pylint: disable=fixme
         print('\n[TODO] Report has been published to [GCS_PATH] bucket within [GCP_PROJECT]\n')
-        pass
     else:
         raise FileNotFoundError(f'[{pytest_report_path}] is not a valid file path')

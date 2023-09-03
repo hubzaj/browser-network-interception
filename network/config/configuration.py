@@ -2,6 +2,7 @@ import os
 from logging import Logger, getLogger
 
 from browser_hz import BrowserType
+
 from network.utils.singleton_meta import SingletonMeta
 
 LOGGER: Logger = getLogger(__name__)
@@ -18,5 +19,4 @@ class Configuration(metaclass=SingletonMeta):
         LOGGER.info('Loading configuration [BROWSER]')
         if browser_type := os.getenv("BROWSER"):
             return BrowserType.get_browser(browser_type)
-        else:
-            return BrowserType.CHROME
+        return BrowserType.CHROME

@@ -10,7 +10,7 @@ from network.keywords.browser import BrowserKeywords
 @pytest.mark.browser
 class TestBannerAdInBrowser:
 
-    def test_banner_ad_in_browser(self, browser_keywords: BrowserKeywords):
+    def test_banner_ad_in_browser(self, browser_keywords: BrowserKeywords) -> None:
         # Given
         ad: BannerAd = BannerAd.REGULAR_AD  # Product of the ad request sent to SSP
 

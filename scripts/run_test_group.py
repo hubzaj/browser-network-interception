@@ -5,7 +5,7 @@ RUN_ALL_TESTS_IN_PARALLEL_CMD: list[str] = ['pytest', '--template=html1/index.ht
 
 def run_all_tests_in_parallel(params: list[str] | None = None) -> None:
     subprocess.run(
-        RUN_ALL_TESTS_IN_PARALLEL_CMD + params if params else RUN_ALL_TESTS_IN_PARALLEL_CMD
+        RUN_ALL_TESTS_IN_PARALLEL_CMD + params if params else RUN_ALL_TESTS_IN_PARALLEL_CMD, check=True
     )
 
 
