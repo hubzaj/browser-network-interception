@@ -27,8 +27,7 @@ class WebServer:
 
     def __exit__(self, exc_type: BaseException, exc_val: BaseException, exc_tb: TracebackType) -> None:
         LOGGER.info('Shutdown web server')
-        # TODO: kill server?
-        pass
+        # TODO: kill server? pylint: disable=fixme
 
     def get_url(self) -> str:
         return f"http://localhost:{self.__port}/{os.path.basename(self.__directory)}"

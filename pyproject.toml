@@ -22,9 +22,10 @@ max-line-length = 120
 max-attributes = 10
 disable = [
     "missing-docstring",
-    "logging-fstring-interpolation"
+    "logging-fstring-interpolation",
+    "too-few-public-methods"
 ]
-good-names = "x, y"
+good-names = "x, y, ad"
 
 [tool.mypy]
 namespace_packages = true
