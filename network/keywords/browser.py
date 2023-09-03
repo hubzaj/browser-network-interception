@@ -1,10 +1,10 @@
 from logging import Logger, getLogger
 from pathlib import Path
-
-from selenium.webdriver.common.by import By
-from seleniumwire.request import Request
+from typing import Union, Tuple
 
 from browser_hz import open_browser
+from seleniumwire.request import Request
+
 from network.banner.default import BannerAd
 from network.banner.factory import create_html_page_with_default_ad
 from network.config.configuration import Configuration
@@ -21,8 +21,8 @@ class BrowserKeywords:
 
     def display_ad_and_get_network_traffic(self,
                                            ad: BannerAd,
-                                           requests_paths_to_wait: list[str] = None,
-                                           click_locator: (By, str) = None) -> list[Request]:
+                                           requests_paths_to_wait: Union[list[str], None] = None,
+                                           click_locator: Union[Tuple[str, str], None] = None) -> list[Request]:
         page_path: Path = create_html_page_with_default_ad(ad=ad, directory=self.__tmp_path)
         with open_browser(CONFIG.browser_type) as browser:
             with WebServer(directory=page_path) as server:

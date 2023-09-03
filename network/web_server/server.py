@@ -4,6 +4,7 @@ from http.server import HTTPServer, CGIHTTPRequestHandler
 from logging import Logger, getLogger
 from pathlib import Path
 from threading import Event
+from types import TracebackType
 
 LOGGER: Logger = getLogger(__name__)
 
@@ -24,7 +25,7 @@ class WebServer:
         self.__start_server_event.wait(self.__SERVER_START_TIMEOUT)
         return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
+    def __exit__(self, exc_type: BaseException, exc_val: BaseException, exc_tb: TracebackType) -> None:
         LOGGER.info('Shutdown web server')
         # TODO: kill server?
         pass
@@ -32,7 +33,7 @@ class WebServer:
     def get_url(self) -> str:
         return f"http://localhost:{self.__port}/{os.path.basename(self.__directory)}"
 
-    def __start_server(self):
+    def __start_server(self) -> None:
         server_directory = os.path.dirname(self.__directory)
         os.chdir(server_directory)
         server = HTTPServer(('', self.__port), CGIHTTPRequestHandler)
