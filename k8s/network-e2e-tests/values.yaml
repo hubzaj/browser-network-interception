@@ -8,4 +8,4 @@ image:
   pullPolicy: IfNotPresent
 
 test:
-  group: pytest
+  group: "Select one or more from pyproject.toml -> [tool.pytest.ini_options] -> markers"

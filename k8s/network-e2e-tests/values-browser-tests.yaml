@@ -1,2 +1,2 @@
 test:
-  group: browser-tests
+  group: browser
