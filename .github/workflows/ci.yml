@@ -38,7 +38,8 @@ jobs:
 
       - name: Lint with pylint and mypy
         run: |
-          poetry run linters
+          poetry run mypy
+          poetry run pylint network tests
 
       - name: Run unit tests
         run: |
