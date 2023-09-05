@@ -30,5 +30,17 @@ jobs:
 
       - name: Check regression
         run: |
-          docker run network pytest tests --template=html1/index.html --report=report.html -n auto
+          docker pull docker.io/hubertzajac6/network:latest
+          docker run docker.io/hubertzajac6/network:latest pytest tests --template=html1/index.html --report=report.html -n auto
+
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const issue_num = context.payload.project_card.content_url.split('/').pop()
+            github.rest.issues.removeLabel({
+              issue_number: issue_num,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["RUN_ALL_TESTS"]
+            })
 
