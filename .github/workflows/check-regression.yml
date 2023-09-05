@@ -20,7 +20,7 @@ jobs:
       - name: Build test image and run all tests
         run: |
           docker build -t network .
-          docker run network pytest tests --template=html1/index.html --report=report.html -n auto
+          docker run network pytest tests --template=html1/index.html --report=report.html -n auto -m browser
 
       - uses: actions/github-script@v6
         with:
