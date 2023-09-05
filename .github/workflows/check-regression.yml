@@ -24,14 +24,12 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Build image
-        uses: docker/build-push-action@v4
-        with:
-          tags: network:latest
+        run: |
+          docker build -t network .
 
       - name: Check regression
         run: |
-          docker pull docker.io/hubertzajac6/network:latest
-          docker run docker.io/hubertzajac6/network:latest pytest tests --template=html1/index.html --report=report.html -n auto
+          docker run network pytest tests --template=html1/index.html --report=report.html -n auto
 
       - uses: actions/github-script@v6
         with:
