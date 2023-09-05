@@ -23,12 +23,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Build image
+      - name: Build test image and run all tests
         run: |
           docker build -t network .
-
-      - name: Check regression
-        run: |
           docker run network pytest tests --template=html1/index.html --report=report.html -n auto
 
       - uses: actions/github-script@v6
