@@ -20,4 +20,4 @@ jobs:
       - name: Build image and run all e2e tests
         run: |
           docker build -t network .
-          docker run -it --rm --name regression-check network pytest tests
+          docker run --name regression-check network pytest tests -n auto
