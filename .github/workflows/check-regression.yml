@@ -17,7 +17,26 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Build image and run all e2e tests
+      - name: Gather runtime environment versions - asdf
+        uses: endorama/asdf-parse-tool-versions@v1
+        id: versions
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "${{ env.PYTHON_VERSION }}"
+
+      - uses: Gr1N/setup-poetry@v8
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+
+      - name: Install dependencies
         run: |
-          docker build -t network .
-          docker run --name regression-check network pytest tests -n auto
+          poetry install
+
+      - name: Run regression tests
+        uses: browser-actions/setup-chrome@v1
+        run: |
+          poetry run pytest tests -n auto --template=html1/index.html --report=report.html
