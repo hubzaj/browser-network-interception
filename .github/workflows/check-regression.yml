@@ -17,14 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            const issue_num = context.payload.project_card.content_url.split('/').pop()
-            github.rest.issues.removeLabel({
-              issue_number: issue_num,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ["RUN_ALL_TESTS"]
-            })
-
+      - name: Build image and run all e2e tests
+        run: |
+          docker build -t network .
+          docker run -it --rm --name regression-check network pytest tests
