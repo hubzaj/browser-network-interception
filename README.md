@@ -1,4 +1,4 @@
-# E2E testing framework designed to validate advertisements on the client side for a system that serves ads
+# Advertisements Test - E2E test framework
 
 [<img src="https://img.shields.io/badge/development-how_to_start-blue">](https://github.com/hubzaj/network/tree/main#working-with-terminal)
 [<img src="https://img.shields.io/badge/configuration-OPTIONS-yellow">](https://github.com/hubzaj/network/tree/main#configuration)
