@@ -1,4 +1,4 @@
-# Advertisements Test - E2E test framework
+# Advertisements Test
 
 [<img src="https://img.shields.io/badge/development-how_to_start-blue">](https://github.com/hubzaj/network/tree/main#working-with-terminal)
 [<img src="https://img.shields.io/badge/configuration-OPTIONS-yellow">](https://github.com/hubzaj/network/tree/main#configuration)
