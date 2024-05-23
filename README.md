@@ -25,7 +25,7 @@ The primary responsibility of this framework is to validate if all the required 
 Requirements:
 
 -     Python ^3.11
--     Poetry ^1.5.1
+-     Poetry ^1.8.2
 
 ### How to run
 
@@ -55,10 +55,8 @@ Configuration is designed in a way to be controlled by environment variables.
 
 ##### Default:
 
-* Browser: `Chrome (without headless)`
+* Browser: `Chrome`
 
 #### Supported browsers:
 
 * `CHROME`
-* `CHROME_HEADLESS`
-* `CHROME_IN_DOCKER` [NOT READY YET]
