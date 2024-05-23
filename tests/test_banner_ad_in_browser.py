@@ -29,3 +29,9 @@ class TestBannerAdInBrowser:
         assert dsp_notification_request.response is None
         # assert dsp_notification_request.response is not None
         # assert dsp_notification_request.response.status_code == HTTPStatus.OK
+
+    def test_1(self) -> None:
+        pass
+
+    def test_2(self) -> None:
+        pass
