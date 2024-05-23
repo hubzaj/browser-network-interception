@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 from _pytest.fixtures import fixture
 
-from network.keywords.browser import BrowserKeywords
+from network.keywords.browser import BrowserActions
 from network.report.pytest_report import PytestReportConfig, publish_pytest_report
 
 
@@ -33,5 +33,5 @@ def pytest_sessionfinish(session: pytest.Session, exitstatus: pytest.ExitCode):
 
 
 @fixture
-def browser_keywords(tmp_path: Path) -> BrowserKeywords:
-    yield BrowserKeywords(tmp_path)
+def browser_actions(tmp_path: Path) -> BrowserActions:
+    yield BrowserActions(tmp_path)

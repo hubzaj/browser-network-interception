@@ -14,7 +14,7 @@ CONFIG: Configuration = Configuration()
 LOGGER: Logger = getLogger(__name__)
 
 
-class BrowserKeywords:
+class BrowserActions:
 
     def __init__(self, path: Path) -> None:
         self.__tmp_path: Path = path
@@ -24,10 +24,10 @@ class BrowserKeywords:
                                            requests_paths_to_wait: Union[list[str], None] = None,
                                            click_locator: Union[Tuple[str, str], None] = None) -> list[Request]:
         page_path: Path = create_html_page_with_default_ad(ad=ad, directory=self.__tmp_path)
-        with open_browser(CONFIG.browser_type) as browser:
-            with WebServer(directory=page_path) as server:
-                browser.open_page(url=server.get_url())
+        with open_browser(CONFIG.browser) as browser:
+            with WebServer(page_path) as server:
+                browser.open_page(server.get_url())
                 if click_locator:
-                    with browser.click_with_redirect_to_new_tab(locator=click_locator):
+                    with browser.click_with_redirect_to_new_tab(click_locator):
                         LOGGER.info('The ad has been clicked')
-                return browser.get_network_traffic(requests_paths_to_wait=requests_paths_to_wait)
+                return browser.get_network_helpers().get_network_traffic(requests_paths_to_wait)
